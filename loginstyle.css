@@ -57,3 +57,10 @@ input:focus::placeholder {
 	color: transparent;
 }
 
+.description {
+	position: relative;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	color: white;
+}

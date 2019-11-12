@@ -1,0 +1,46 @@
+<header>
+      <!-- The <i> tag below includes the bullhorn icon from Font Awesome -->
+    
+    <a href='/home'><h1 class="site-title">Beaver Lair</h1></a>
+
+      <nav class="navbar">
+        <ul class="navlist">
+          <li class="navitem navlink active"><a href="/home">Home</a></li>
+          <li class="navitem navlink"><a href="/games">Games</a></li>
+          <li class="navitem navlink"><a href="/results">Results</a></li>
+	  <li class="navitem navlink"><a href="/standings">Standings</a></li>
+	  <li class="navitem navlink"><a href="/users">Users</a></li>
+	  <li class="navitem navlink"><a href="/messages">Messages</a></li>
+          <li class="navitem navbar-search">
+            <input type="text" id="navbar-search-input" placeholder="Search...">
+            <button type="button" id="navbar-search-button"><i class="fas fa-search"></i></button>
+          </li>
+        </ul>
+      </nav>
+</header>
+
+
+
+<br>
+<br>
+    <table>
+      <tr>
+        <th>chat_number</th>
+        <th>game_id</th>
+        <th>username</th>
+        <th>messages</th>
+        <th>date_sent</th>
+        <th>time_sent</th>
+      </tr>	
+      {{#each messages}}
+	<tr>
+        <th>{{{chat_number}}}</th>
+        <th>{{{game_id}}}</th>
+        <th>{{{username}}}</th>
+        <th>{{{message}}}</th>
+        <th>{{{date_sent}}}</th>
+        <th>{{{time_sent}}}</th>
+      </tr>
+      {{/each}}
+     </table> 
+      

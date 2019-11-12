@@ -1,0 +1,63 @@
+<header>
+      <!-- The <i> tag below includes the bullhorn icon from Font Awesome -->
+    
+    <a href='/home'><h1 class="site-title">Beaver Lair</h1></a>
+
+      <nav class="navbar">
+        <ul class="navlist">
+          <li class="navitem navlink active"><a href="/home">Home</a></li>
+          <li class="navitem navlink"><a href="/games">Games</a></li>
+          <li class="navitem navlink"><a href="/results">Results</a></li>
+	  <li class="navitem navlink"><a href="/standings">Standings</a></li>
+	  <li class="navitem navlink"><a href="/users">Users</a></li>
+	  <li class="navitem navlink"><a href="/messages">Messages</a></li>
+          <li class="navitem navbar-search">
+            <input type="text" id="navbar-search-input" placeholder="Search...">
+            <button type="button" id="navbar-search-button"><i class="fas fa-search"></i></button>
+          </li>
+        </ul>
+      </nav>
+</header>
+
+
+
+
+<main class="score-container">
+	{{#each results}}
+	<article class="mini-scoreboard">
+        <div class="scoreboard-icon">
+          <i class="fas fa-basketball-ball"></i>
+        </div>
+        <div class="scoreboard-content">
+
+          <div class="Team_1_Info">
+          <p class="Team_1_Name">
+       			{{{team_name}}}
+	  </p>
+	  <p class="Team_1_Score">
+        		{{{team_1_score}}}
+	  </p>
+	  </div>
+	
+          <div class="Team_2_Info">
+          <p class="Team_2_Name">
+        		{{{team_name}}}
+	  </p>
+	  <p class="Team_2_Score">
+        		{{{team_2_score}}}
+	  </p>
+          </div>
+	  
+          <div class="Game_Info">
+	  <p class="Games_Date">
+        		{{{game_date}}}
+	  </p>
+	  <p class="Time_Left">
+        		{{{time_left}}}
+	  </p>
+  	  </div>
+	  <button type"button" id="thread-icon"><i class="far fa-comment-alt"></i></button>
+        </div>
+        </article>
+	{{/each}}
+</main> 

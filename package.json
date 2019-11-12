@@ -1,0 +1,29 @@
+{
+  "name": "cs340-project",
+  "version": "1.0.0",
+  "description": "CS340 Final Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "handlebars views/partials/messageTemplate.handlebars -f public/messageJSTemplate.js",
+    "start": "node server.js",
+    "prestart": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramosjos/webappHB.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ramosjos/webappHB/issues"
+  },
+  "homepage": "https://github.com/ramosjos/webappHB.git#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.17.0",
+    "mariadb": "^10.3.13"
+  }
+}
