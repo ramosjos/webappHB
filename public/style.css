@@ -98,7 +98,7 @@ a:focus {
 
 
 
-.scoreboard-container {
+.score-container {
   margin: 50px 10%;
   display: flex;
   flex-wrap: wrap;
@@ -133,38 +133,72 @@ a:focus {
   font-weight: bold;
 }
 
-
-
-
-/*
-#select-game-button {
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  height: 60px;
-  width: 60px;
-  border: none;
-  border-radius: 30px;
-  font-size: 30px;
-  background-color: #d73f09;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+p.Team_1_Name {
+	width: 100%;
+	font-size: x-large;
+}
+p.Team_2_Name {
+	width: 100%;
+	font-size: x-large;
+}
+p.Team_1_Score {
+	width: 100%;
+	font-size: large;
+}
+p.Team_2_Score {
+	width: 100%;
+	font-size: large;
+}
+p.Quarter {
+	float: left;
+}
+p.Time_Left {
+	float: right;
+}
+.Game_Info {
+	margin-top: 10px;
+	width: 100%;
 }
 
-#select-game-button:hover,
-#select-game-button:focus {
-  right: 27px;
-  bottom: 27px;
-  height: 66px;
-  width: 66px;
-  border-radius: 33px;
-  font-size: 36px;
-  background-color: #319df6;
+.Team_1_Info {
+	border: 2px solid #1a1a1a;
+	border-radius: 4px; 
 }
 
-#select-game-button:focus {
-  outline: none;
+.Team_2_Info {
+	border: 2px solid #1a1a1a; 
+	border-radius: 4px;
+	margin-top: 8px;
+}
+
+#thread-icon {
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#insert-game {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 110px;
+	color: #d73f09;
+}
+
+#delete-game {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 60px;
+	color: #d73f09;
+}
+
+#edit-game {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 10px;
+	color: #d73f09;
 }
 
 #modal-backdrop {
@@ -177,7 +211,7 @@ a:focus {
   background-color: rgba(0, 0, 0, 0.85);
 }
 
-#select-game-modal {
+#create-game-modal {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -273,66 +307,15 @@ a:focus {
 }
 
 .modal-footer .modal-accept-button {
-  background-color: #319df6;
+  background-color: #d73f09;
   color: #fff;
 }
 
 .modal-footer .modal-accept-button:hover {
   background-color: #087dde;
 }
-*/
 
-p.Team_1_Name {
-	width: 100%;
-	font-size: x-large;
-}
-p.Team_2_Name {
-	width: 100%;
-	font-size: x-large;
-}
-p.Team_1_score {
-	width: 100%;
-	font-size: large;
-}
-p.Team_2_Score {
-	width: 100%;
-	font-size: large;
-}
-p.Quarter {
-	float: left;
-}
-p.Time_Left {
-	float: right;
-}
-.Game_Info {
-	margin-top: 10px;
-	width: 100%;
-}
 
-.Team_1_Info {
-	border: 2px solid #1a1a1a;
-	border-radius: 4px; 
-}
-
-.Team_2_Info {
-	border: 2px solid #1a1a1a; 
-	border-radius: 4px;
-	margin-top: 8px;
-}
-
-#thread-icon {
-	width: 100%;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
-.description {
-	position: relative;
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
-	color: white;
-}
 
 table {
   font-family: arial, sans-serif;
@@ -349,4 +332,5 @@ td, th {
 tr{
   background-color: #d73f09;
 }
+
 

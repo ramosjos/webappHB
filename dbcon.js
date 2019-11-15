@@ -1,11 +1,11 @@
-var mariadb = require('mariadb');
+var mysql = require('mysql');
 
-var pool = mariadb.createPool({
+var pool = mysql.createPool({
+	connectionLimit: 10,
 	host: 'classmysql.engr.oregonstate.edu', 
-	database: 'cs340_ramosjos', 
-	user: 'cs340_ramosjos', 
+	user: 'cs340_ramosjos',  
 	password: '3977', 
-	connectionLimit: 10
+	database: 'cs340_ramosjos'
 });
 
 module.exports.pool = pool;
