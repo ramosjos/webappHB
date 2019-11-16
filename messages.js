@@ -3,7 +3,7 @@ module.exports = function(){
     var router = express.Router();
 
     function getMessages(res, mysql, context, complete){
-        mysql.pool.query("SELECT * FROM messages", function(error, results, fields){
+        mysql.pool.query("SELECT chat_number, game_id, username, message, DATE_FORMAT(date_sent, \'%m-%d-%Y\') AS date_sent, time_sent FROM messages", function(error, results, fields){
             if(error){
                 res.write(JSON.stringify(error));
                 res.end();
@@ -20,7 +20,8 @@ module.exports = function(){
         function complete(){
             callbackCount++;
             if(callbackCount >= 1){
-                res.render('messages', context);
+       	      console.log(context);  
+              res.render('messages', context);
             }
 
         }

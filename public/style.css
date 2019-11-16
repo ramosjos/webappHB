@@ -155,6 +155,11 @@ p.Quarter {
 p.Time_Left {
 	float: right;
 }
+
+p.Game_Date {
+	float: left;
+}
+
 .Game_Info {
 	margin-top: 10px;
 	width: 100%;
@@ -175,30 +180,6 @@ p.Time_Left {
 	width: 100%;
 	margin-top: 5px;
 	margin-bottom: 5px;
-}
-
-#insert-game {
-	position: relative;
-	position: absolute;
-	bottom: 20px;
-	right: 110px;
-	color: #d73f09;
-}
-
-#delete-game {
-	position: relative;
-	position: absolute;
-	bottom: 20px;
-	right: 60px;
-	color: #d73f09;
-}
-
-#edit-game {
-	position: relative;
-	position: absolute;
-	bottom: 20px;
-	right: 10px;
-	color: #d73f09;
 }
 
 #modal-backdrop {
@@ -332,5 +313,126 @@ td, th {
 tr{
   background-color: #d73f09;
 }
+
+#insert-game {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 110px;
+	color: #d73f09;
+}
+
+#delete-game {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 60px;
+	color: #d73f09;
+}
+
+#edit-game {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 10px;
+	color: #d73f09;
+}
+
+#insert-result {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 110px;
+	color: #d73f09;
+}
+
+#delete-result {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 60px;
+	color: #d73f09;
+}
+
+#edit-result {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 10px;
+	color: #d73f09;
+}
+
+#insert-standing {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 110px;
+	color: #d73f09;
+}
+
+#delete-standing {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 60px;
+	color: #d73f09;
+}
+
+#edit-standing {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 10px;
+	color: #d73f09;
+}
+
+#insert-message {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 110px;
+	color: #d73f09;
+}
+
+#delete-message {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 60px;
+	color: #d73f09;
+}
+
+#edit-message {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 10px;
+	color: #d73f09;
+}
+
+#insert-user {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 110px;
+	color: #d73f09;
+}
+
+#delete-user {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 60px;
+	color: #d73f09;
+}
+
+#edit-user {
+	position: relative;
+	position: absolute;
+	bottom: 20px;
+	right: 10px;
+	color: #d73f09;
+}
+
 
 
