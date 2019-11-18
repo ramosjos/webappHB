@@ -65,3 +65,57 @@
 
       <button type = "button" id="edit-game"><i class="fas fa-edit"></i></button>
 
+    <div id="modal-backdrop" class="hidden"></div>
+     <div id="insert-game-modal" class="hidden">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>Add Game</h3>
+          <!--<button type="button" class="modal-close-button">&times;</button>-->
+        </div>
+
+        <div class="modal-body">
+          <div class="input-element">
+            <label for="input-1">Stadium</label>
+            <input type="text" id="input-1">
+          </div>
+          <div class="input-element">
+            <label for="input-2">Game Date</label>
+            <input type="text" id="input-2">
+          </div>
+          <div class="input-element">
+            <label for="input-3">Start Time</label>
+            <input type="text" id="input-3">
+          </div>
+	  <div class="input-element">
+            <label for="input-4">Team 1 ID</label>
+            <input type="text" id="input-4">
+          </div>
+          <div class="input-element">
+            <label for="input-5">Team 2 ID</label>
+            <input type="text" id="input-5">
+          </div>
+        
+          <div class="modal-header">
+          <h3>Delete Game</h3>
+          </div>
+          <div class="input-element">
+            <label for="input-6">Stadium</label>
+            <input type="text" id="input-6">
+          </div>
+          <div class="input-element">
+            <label for="input-7">Game Date</label>
+            <input type="text" id="input-7">
+          </div>
+          <div class="input-element">
+            <label for="input-8">Start Time</label>
+            <input type="text" id="input-8">
+          </div>
+         </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-cancel-button">Cancel</button>
+          <button type="button" class="modal-accept-button">Add Game</button>
+          <button type="button" class="modal-accept-button">Delete Game</button>
+        </div>
+      </div>
+     </div>
