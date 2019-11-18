@@ -167,11 +167,11 @@ p.Game_Date {
 
 .Team_1_Info {
 	border: 2px solid #1a1a1a;
-	border-radius: 4px; 
+	border-radius: 4px;
 }
 
 .Team_2_Info {
-	border: 2px solid #1a1a1a; 
+	border: 2px solid #1a1a1a;
 	border-radius: 4px;
 	margin-top: 8px;
 }
@@ -445,6 +445,26 @@ tr{
   background-color: #eee;
 }
 
+.modal-footer .modal-add-standing-button {
+  background-color: #319df6;
+  color: #fff;
+}
+
+.modal-footer .modal-add-standing-button:hover {
+  background-color: #087dde;
+}
+
+
+.modal-footer .modal-edit-standing-button {
+  background-color: #319df6;
+  color: #fff;
+}
+
+.modal-footer .modal-edit-standing-button:hover {
+  background-color: #087dde;
+}
+
+
 .modal-footer .modal-accept-button {
   background-color: #319df6;
   color: #fff;
@@ -453,6 +473,3 @@ tr{
 .modal-footer .modal-accept-button:hover {
   background-color: #087dde;
 }
-
-
-

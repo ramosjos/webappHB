@@ -1,6 +1,6 @@
 <header>
       <!-- The <i> tag below includes the bullhorn icon from Font Awesome -->
-    
+
     <a href='/home'><h1 class="site-title">Beaver Lair</h1></a>
 
       <nav class="navbar">
@@ -31,7 +31,7 @@
         <th>Losses</th>
         <th>Ties</th>
         <th>Win Percentage</th>
-      </tr>	
+      </tr>
       {{#each standings}}
 	<tr>
         <th>{{team_name}}</th>
@@ -42,13 +42,13 @@
         <th>{{win_percentage}}</th>
       </tr>
       {{/each}}
-     </table> 
+     </table>
       <button type = "button" id="insert-standing"><i class="fas fa-upload"></i></button>
-       
-      <button type = "button" id="delete-standing"><i class="fas fa-trash-alt"></i></button> 
+
+      <button type = "button" id="delete-standing"><i class="fas fa-trash-alt"></i></button>
 
       <button type = "button" id="edit-standing"><i class="fas fa-edit"></i></button>
-     
+
     <div id="modal-backdrop" class="hidden"></div>
     <div id="insert-standing-modal" class="hidden">
       <div class="modal-dialog">
@@ -85,9 +85,39 @@
           </div>
         </div>
 
+        <div class="modal-header">
+         <h3>Edit Team</h3>
+        </div>
+        <div class="input-element">
+          <label for="input-1">Team Name</label>
+          <input type="text" id="input-1">
+        </div>
+        <div class="input-element">
+          <label for="input-2">New Standing</label>
+          <input type="text" id="input-2">
+        </div>
+        <div class="input-element">
+          <label for="input-3">New Wins</label>
+          <input type="text" id="input-3">
+        </div>
+        <div class="input-element">
+          <label for="input-4">New Losses</label>
+          <input type="text" id="input-4">
+        </div>
+        <div class="input-element">
+          <label for="input-5">New Ties</label>
+          <input type="text" id="input-5">
+        </div>
+        <div class="input-element">
+          <label for="input-6">New Win Percentage</label>
+          <input type="text" id="input-6">
+        </div>
+      </div>
+
         <div class="modal-footer">
           <button type="button" class="modal-cancel-button">Cancel</button>
-          <button type="button" class="modal-accept-button">Add Team</button>
+          <button type="button" class="modal-add-standing-button">Add Team</button>
+          <button type="button" class="modal-edit-standing-button">Update Team</button>
         </div>
       </div>
     </div>

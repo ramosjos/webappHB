@@ -11,14 +11,15 @@ var insert_game_button = document.getElementById("insert-game");
 var insert_standing_button = document.getElementById("insert-standing");
 var insert_user_button = document.getElementById("insert-user");
 
-var game_modal = document.getElementById("insert-game-modal"); 
-var standing_modal = document.getElementById("insert-standing-modal"); 
-var user_modal = document.getElementById("insert-user-modal"); 
+var game_modal = document.getElementById("insert-game-modal");
+var standing_modal = document.getElementById("insert-standing-modal");
+var user_modal = document.getElementById("insert-user-modal");
 
 var modalBackdrop = document.getElementById("modal-backdrop");
 var modalCancel = document.getElementsByClassName("modal-cancel-button")[0];
 var modalClose = document.getElementsByClassName("modal-close-button")[0];
-var modalAccept = document.getElementsByClassName("modal-accept-button")[0];
+var modalAddStandingButton = document.getElementsByClassName("modal-add-standing-button")[0];
+var modalEditStandingButton = document.getElementsByClassName("modal-edit-standing-button")[0];
 
 // GAME MODAL //
 function showGameModal(event) {
@@ -101,4 +102,3 @@ if(insert_user_button){
 	modalCancel.addEventListener('click', closeUserModal);
 	modalClose.addEventListener('click', closeUserModal);
 }
-
