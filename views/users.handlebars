@@ -12,7 +12,7 @@
 	  <li class="navitem navlink"><a href="/users">Users</a></li>
 	  <li class="navitem navlink"><a href="/messages">Messages</a></li>
           <li class="navitem navbar-search">
-            <input type="text" id="navbar-search-input" placeholder="Search...">
+            <input type="text" id="navbar-search-input" placeholder="Search for user...">
             <button type="button" id="navbar-search-button"><i class="fas fa-search"></i></button>
           </li>
         </ul>
@@ -34,14 +34,11 @@
       </tr>
       {{/each}}
      </table> 
-      <button type = "button" id="insert-user"><i class="fas fa-upload"></i></button>
-       
-      <button type = "button" id="delete-user"><i class="fas fa-trash-alt"></i></button> 
 
-      <!--<button type = "button" id="edit-user"><i class="fas fa-edit"></i></button>-->
+     <button type = "button" id="edit-user"><i class="fas fa-edit"></i></button>
 
      <div id="modal-backdrop" class="hidden"></div>
-     <div id="insert-user-modal" class="hidden">
+     <div id="user-modal" class="hidden">
       <div class="modal-dialog">
 
         <div class="modal-header">
@@ -52,16 +49,16 @@
         <div class="modal-body">
           <div class="input-element">
             <label for="input-1">Username</label>
-            <input type="text" id="input-1">
+            <input type="number" id="input-1">
           </div>
           <div class="input-element">
             <label for="input-2">Password</label>
             <input type="text" id="input-2">
           </div>
-
+         </div>
         <div class="modal-footer">
           <button type="button" class="modal-cancel-button">Cancel</button>
-          <button type="button" class="modal-accept-button">Add Team</button>
+          <button type="button" class="modal-add-user-button">Add User</button>
         </div>
       </div>
-     </div>    
+     </div>

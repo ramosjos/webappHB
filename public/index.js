@@ -7,32 +7,34 @@ var input_6 = document.getElementById("input-6");
 var input_7 = document.getElementById("input-6");
 var input_8 = document.getElementById("input-6");
 
-var insert_game_button = document.getElementById("insert-game");
-var insert_standing_button = document.getElementById("insert-standing");
-var insert_user_button = document.getElementById("insert-user");
+var game_button = document.getElementById("edit-game");
+var result_button = document.getElementById("edit-result");
+var standing_button = document.getElementById("edit-standing");
+var user_button = document.getElementById("edit-user");
+var message_button = document.getElementById("edit-message");
 
-var game_modal = document.getElementById("insert-game-modal");
-var standing_modal = document.getElementById("insert-standing-modal");
-var user_modal = document.getElementById("insert-user-modal");
+var game_modal = document.getElementById("game-modal");
+var result_modal = document.getElementById("result-modal");
+var standing_modal = document.getElementById("standing-modal");
+var user_modal = document.getElementById("user-modal");
+var message_modal = document.getElementById("message-modal");
 
 var modalBackdrop = document.getElementById("modal-backdrop");
 var modalCancel = document.getElementsByClassName("modal-cancel-button")[0];
 var modalClose = document.getElementsByClassName("modal-close-button")[0];
+
+var modalAddGameButton = document.getElementsByClassName("modal-add-game-button")[0];
+var modalDeleteGameButton = document.getElementsByClassName("modal-delete-game-button")[0];
+var modalAddResultButton = document.getElementsByClassName("modal-add-result-button")[0];
 var modalAddStandingButton = document.getElementsByClassName("modal-add-standing-button")[0];
 var modalEditStandingButton = document.getElementsByClassName("modal-edit-standing-button")[0];
+var modalAddUserButton = document.getElementsByClassName("modal-add-user-button")[0];
+var modalAddMessageButton = document.getElementsByClassName("modal-add-message-button")[0];
 
 // GAME MODAL //
 function showGameModal(event) {
 	game_modal.style.display = "block";
 	modalBackdrop.style.display = "block";
-	input_1.value = "";
-	input_2.value = "";
-	input_3.value = "";
-	input_4.value = "";
-	input_5.value = "";
-	input_6.value = "";
-	input_7.value = "";
-	input_8.value = "";
 }
 
 function closeGameModal(event) {
@@ -40,16 +42,21 @@ function closeGameModal(event) {
 	modalBackdrop.style.display = "none";
 }
 
+// Result MODAL //
+function showResultModal(event) {
+	result_modal.style.display = "block";
+	modalBackdrop.style.display = "block";
+}
+
+function closeResultModal(event) {
+	result_modal.style.display = "none";
+	modalBackdrop.style.display = "none";
+}
+
 // STANDING MODAL //
 function showStandingModal(event) {
 	standing_modal.style.display = "block";
 	modalBackdrop.style.display = "block";
-	input_1.value = "";
-	input_2.value = "";
-	input_3.value = "";
-	input_4.value = "";
-	input_5.value = "";
-	input_6.value = "";
 }
 
 function closeStandingModal(event) {
@@ -61,12 +68,21 @@ function closeStandingModal(event) {
 function showUserModal(event) {
 	user_modal.style.display = "block";
 	modalBackdrop.style.display = "block";
-	input_1.value = "";
-	input_2.value = "";
 }
 
 function closeUserModal(event) {
 	user_modal.style.display = "none";
+	modalBackdrop.style.display = "none";
+}
+
+// MESSAGE MODAL //
+function showMessageModal(event) {
+	message_modal.style.display = "block";
+	modalBackdrop.style.display = "block";
+}
+
+function closeMessageModal(event) {
+	Message_modal.style.display = "none";
 	modalBackdrop.style.display = "none";
 }
 
@@ -75,6 +91,11 @@ window.onclick = function(event) {
 		game_modal.style.display = "none";
 		modalBackdrop.style.display = "none";
 	}
+	if (event.target == result_modal) {
+		result_modal.style.display = "none";
+		modalBackdrop.style.display = "none";
+	}
+
 	if (event.target == standing_modal) {
 		standing_modal.style.display = "none";
 		modalBackdrop.style.display = "none";
@@ -83,22 +104,39 @@ window.onclick = function(event) {
 		user_modal.style.display = "none";
 		modalBackdrop.style.display = "none";
 	}
+	if (event.target == message_modal) {
+		message_modal.style.display = "none";
+		modalBackdrop.style.display = "none";
+	}
+
 }
 
-if(insert_game_button){
-	insert_game_button.addEventListener('click', showGameModal);
+if(game_button){
+	game_button.addEventListener('click', showGameModal);
 	modalCancel.addEventListener('click', closeGameModal);
 	modalClose.addEventListener('click', closeGameModal);
 }
 
-if(insert_standing_button){
-	insert_standing_button.addEventListener('click', showStandingModal);
+if(result_button){
+	result_button.addEventListener('click', showResultModal);
+	modalCancel.addEventListener('click', closeResultModal);
+	modalClose.addEventListener('click', closeResultModal);
+}
+
+if(standing_button){
+	standing_button.addEventListener('click', showStandingModal);
 	modalCancel.addEventListener('click', closeStandingModal);
 	modalClose.addEventListener('click', closeStandingModal);
 }
 
-if(insert_user_button){
-	insert_user_button.addEventListener('click', showUserModal);
+if(user_button){
+	user_button.addEventListener('click', showUserModal);
 	modalCancel.addEventListener('click', closeUserModal);
 	modalClose.addEventListener('click', closeUserModal);
+}
+
+if(message_button){
+	message_button.addEventListener('click', showMessageModal);
+	modalCancel.addEventListener('click', closeMessageModal);
+	modalClose.addEventListener('click', closeMessageModal);
 }

@@ -198,126 +198,52 @@ tr{
   background-color: #d73f09;
 }
 
-#insert-game {
-	position: relative;
-	position: absolute;
-	bottom: 20px;
-	right: 110px;
-	color: #d73f09;
-}
-
-#delete-game {
-	position: relative;
-	position: absolute;
-	bottom: 20px;
-	right: 60px;
-	color: #d73f09;
-}
-
 #edit-game {
 	position: relative;
 	position: absolute;
 	bottom: 20px;
-	right: 10px;
-	color: #d73f09;
-}
-
-#insert-result {
-	position: relative;
-	position: absolute;
-	bottom: 20px;
 	right: 110px;
 	color: #d73f09;
-}
+	background-color: white;
 
-#delete-result {
-	position: relative;
-	position: absolute;
-	bottom: 20px;
-	right: 60px;
-	color: #d73f09;
 }
 
 #edit-result {
 	position: relative;
 	position: absolute;
 	bottom: 20px;
-	right: 10px;
-	color: #d73f09;
-}
-
-#insert-standing {
-	position: relative;
-	position: absolute;
-	bottom: 20px;
 	right: 110px;
 	color: #d73f09;
-}
-
-#delete-standing {
-	position: relative;
-	position: absolute;
-	bottom: 20px;
-	right: 60px;
-	color: #d73f09;
+	background-color: white;
 }
 
 #edit-standing {
 	position: relative;
 	position: absolute;
 	bottom: 20px;
-	right: 10px;
-	color: #d73f09;
-}
-
-#insert-message {
-	position: relative;
-	position: absolute;
-	bottom: 20px;
 	right: 110px;
 	color: #d73f09;
-}
-
-#delete-message {
-	position: relative;
-	position: absolute;
-	bottom: 20px;
-	right: 60px;
-	color: #d73f09;
+	background-color: white;
 }
 
 #edit-message {
 	position: relative;
 	position: absolute;
 	bottom: 20px;
-	right: 10px;
-	color: #d73f09;
-}
-
-#insert-user {
-	position: relative;
-	position: absolute;
-	bottom: 20px;
 	right: 110px;
 	color: #d73f09;
+	background-color: white;
 }
 
-#delete-user {
-	position: relative;
-	position: absolute;
-	bottom: 20px;
-	right: 60px;
-	color: #d73f09;
-}
 
 #edit-user {
 	position: relative;
 	position: absolute;
 	bottom: 20px;
-	right: 10px;
+	right: 110px;
 	color: #d73f09;
+	background-color: white;
 }
-
 
 #modal-backdrop {
   position: fixed;
@@ -329,7 +255,7 @@ tr{
   background-color: rgba(0, 0, 0, 0.85);
 }
 
-#insert-game-modal {
+#game-modal {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -339,7 +265,7 @@ tr{
   overflow: scroll;
 }
 
-#insert-standing-modal {
+#result-modal {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -349,7 +275,7 @@ tr{
   overflow: scroll;
 }
 
-#insert-user-modal {
+#standing-modal {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -359,6 +285,25 @@ tr{
   overflow: scroll;
 }
 
+#user-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+}
+
+#message-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+}
 
 .hidden {
   display: none;
@@ -441,35 +386,76 @@ tr{
   cursor: pointer;
 }
 
-.modal-footer .modal-cancel-button:hover {
-  background-color: #eee;
+
+.modal-footer .modal-add-game-button {
+  background-color: #d73f09;
+  color: #fff;
 }
 
+.modal-footer .modal-add-game-button:hover {
+  background-color: #932c06;
+}
+
+.modal-footer .modal-delete-game-button {
+  background-color: #d73f09;
+  color: #fff;
+}
+
+.modal-footer .modal-delete-game-button:hover {
+  background-color: #932c06;
+}
+
+
+
+.modal-footer .modal-add-result-button {
+  background-color: #d73f09;
+  color: #fff;
+}
+
+.modal-footer .modal-add-result-button:hover {
+  background-color: #932c06;
+}
+
+
+
 .modal-footer .modal-add-standing-button {
-  background-color: #319df6;
+  background-color: #d73f09;
   color: #fff;
 }
 
 .modal-footer .modal-add-standing-button:hover {
-  background-color: #087dde;
+  background-color: #932c06;
 }
 
-
 .modal-footer .modal-edit-standing-button {
-  background-color: #319df6;
+  background-color: #d73f09;
   color: #fff;
 }
 
 .modal-footer .modal-edit-standing-button:hover {
-  background-color: #087dde;
+  background-color: #932c06;
 }
 
 
-.modal-footer .modal-accept-button {
-  background-color: #319df6;
+
+.modal-footer .modal-add-user-button {
+  background-color: #d73f09;
   color: #fff;
 }
 
-.modal-footer .modal-accept-button:hover {
-  background-color: #087dde;
+.modal-footer .modal-add-user-button:hover {
+  background-color: #932c06;
 }
+
+
+
+.modal-footer .modal-add-message-button {
+  background-color: #d73f09;
+  color: #fff;
+}
+
+.modal-footer .modal-add-message-button:hover {
+  background-color: #932c06;
+}
+
+
