@@ -27,20 +27,21 @@ module.exports = function(){
         }
     });
 
+    router.put('/:id', function(req, res){
+        var mysql = req.app.get('mysql');
+        console.log(req.body)
+        console.log(req.params.id)
+        var sql = "UPDATE teams SET standing=?, wins=?, losses=?, ties=? , win_percentage WHERE team_name=?";
+        var inserts = [req.body.standing, req.body.wins, req.body.losses, req.body.ties, req.body.win_percentage, req.params.id];
+        sql = mysql.pool.query(sql,inserts,function(error, results, fields){
+            if(error){
+                res.write(JSON.stringify(error));
+                res.end();
+            }
+        });
+    });
+
+
+
     return router;
 }();
-
-
-router.put('/:id', function(req, res){
-    var mysql = req.app.get('mysql');
-    console.log(req.body)
-    console.log(req.params.id)
-    var sql = "UPDATE teams SET standing=?, wins=?, losses=?, ties=? , win_percentage WHERE team_name=?";
-    var inserts = [req.body.standing, req.body.wins, req.body.losses, req.body.ties, req.body.win_percentage, req.params.id];
-    sql = mysql.pool.query(sql,inserts,function(error, results, fields){
-        if(error){
-            res.write(JSON.stringify(error));
-            res.end();
-        }
-    });
-});
