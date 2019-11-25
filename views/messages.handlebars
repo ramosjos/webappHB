@@ -46,6 +46,7 @@
 
       <button type = "button" id="edit-message"><i class="fas fa-edit"></i></button>
 
+     <form id="addmessage" action="/messages" method="post">
      <div id="modal-backdrop" class="hidden"></div>
      <div id="message-modal" class="hidden">
       <div class="modal-dialog">
@@ -54,32 +55,29 @@
           <h3>Add Message</h3>
           <button type="button" class="modal-close-button">&times;</button>
         </div>
-
+	
         <div class="modal-body">
           <div class="input-element">
             <label for="input-1">Game ID</label>
-            <input type="number" id="input-1">
+            <input type="number" id="input-1" name="game_id">
           </div>
           <div class="input-element">
             <label for="input-2">Username</label>
-            <input type="text" id="input-2">
+            <input type="text" id="input-2" name="username">
           </div>
           <div class="input-element">
             <label for="input-3">Message</label>
-            <input type="text" id="input-3">
+            <input type="text" id="input-3" name="message">
           </div>
           <div class="input-element">
             <label for="input-4">Date</label>
-            <input type="date" id="input-4">
-          </div>
-          <div class="input-element">
-            <label for="input-5">Time</label>
-            <input type="time" id="input-5">
+            <input type="date" id="input-4" name="date_sent">
           </div>
          </div>
         <div class="modal-footer">
           <button type="button" class="modal-cancel-button">Cancel</button>
-          <button type="button" class="modal-add-message-button">Add Message</button>
+          <button type="submit" class="modal-add-message-button">Add Message</button>
         </div>
       </div>
      </div>
+     </form>

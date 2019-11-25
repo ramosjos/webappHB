@@ -65,6 +65,7 @@
      <div id="result-modal" class="hidden">
       <div class="modal-dialog">
 
+        <form id="addresult" action="/results" method="post">
         <div class="modal-header">
           <h3>Add Result</h3>
           <button type="button" class="modal-close-button">&times;</button>
@@ -73,36 +74,37 @@
         <div class="modal-body">
           <div class="input-element">
             <label for="input-1">Game ID</label>
-            <input type="number" id="input-1">
+            <input type="number" id="input-1" name="game_id">
           </div>
           <div class="input-element">
             <label for="input-2">Team 1 ID</label>
-            <input type="number" id="input-2">
+            <input type="number" id="input-2" name="team_1_id">
           </div>
           <div class="input-element">
             <label for="input-3">Team 2 ID</label>
-            <input type="number" id="input-3">
+            <input type="number" id="input-3" name="team_2_id">
           </div>
           <div class="input-element">
             <label for="input-4">Team 1 Score</label>
-            <input type="number" id="input-4">
+            <input type="number" id="input-4" name="team_1_score">
           </div>
           <div class="input-element">
             <label for="input-5">Team 2 Score</label>
-            <input type="number" id="input-5">
+            <input type="number" id="input-5" name="team_2_score">
           </div>
           <div class="input-element">
             <label for="input-6">Quarter</label>
-            <input type="number" id="input-6">
+            <input type="number" id="input-6" name="quarter">
           </div>
 	  <div class="input-element">
             <label for="input-7">Time Left</label>
-            <input type="time" id="input-7">
+            <input type="text" id="input-7" name="time_left">
           </div>
          </div>
         <div class="modal-footer">
           <button type="button" class="modal-cancel-button">Cancel</button>
-          <button type="button" class="modal-add-result-button">Add Result</button>
+          <button type="submit" class="modal-add-result-button">Add Result</button>
         </div>
+	</form>
       </div>
      </div>

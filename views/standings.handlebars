@@ -49,70 +49,59 @@
     <div id="modal-backdrop" class="hidden"></div>
     <div id="standing-modal" class="hidden">
       <div class="modal-dialog">
-
+	<form id="addstanding" action="/standings" method="post">
         <div class="modal-header">
           <h3>Add Team</h3>
           <button type="button" class="modal-close-button">&times;</button>
         </div>
-
         <div class="modal-body">
           <div class="input-element">
             <label for="input-1">Team Name</label>
-            <input type="text" id="input-1">
+            <input type="text" id="input-1" name="team_name">
           </div>
           <div class="input-element">
-            <label for="input-2">Standing</label>
-            <input type="number" id="input-2">
+            <label for="input-2">Wins</label>
+            <input type="number" id="input-2" name="wins">
           </div>
           <div class="input-element">
-            <label for="input-3">Wins</label>
-            <input type="number" id="input-3">
+            <label for="input-3">Losses</label>
+            <input type="number" id="input-3" name="losses">
           </div>
           <div class="input-element">
-            <label for="input-4">Losses</label>
-            <input type="number" id="input-4">
+            <label for="input-4">Ties</label>
+            <input type="number" id="input-4" name="ties">
           </div>
-          <div class="input-element">
-            <label for="input-5">Ties</label>
-            <input type="number" id="input-5">
+	  <div class="modal-footer">
+          <button type="button" class="modal-cancel-button">Cancel</button>
+          <button type="submit" class="modal-add-standing-button">Add Team</button>
           </div>
-          <div class="input-element">
-            <label for="input-6">Win Percentage</label>
-            <input type="text" id="input-6">
-          </div>
-
+        </form>
+	
+	<form id="editteam" action="/standings" method="put">
         <div class="modal-header">
          <h3>Edit Team</h3>
         </div>
         <div class="input-element">
-          <label for="input-1">Team Name</label>
-          <input type="text" id="input-1">
+          <label for="input-5">Team Name</label>
+          <input type="text" id="input-5" name="team_name">
         </div>
         <div class="input-element">
-          <label for="input-2">New Standing</label>
-          <input type="number" id="input-2">
+          <label for="input-6">New Wins</label>
+          <input type="number" id="input-6" name="wins">
         </div>
         <div class="input-element">
-          <label for="input-3">New Wins</label>
-          <input type="number" id="input-3">
+          <label for="input-7">New Losses</label>
+          <input type="number" id="input-7" name="losses">
         </div>
         <div class="input-element">
-          <label for="input-4">New Losses</label>
-          <input type="number" id="input-4">
-        </div>
-        <div class="input-element">
-          <label for="input-5">New Ties</label>
-          <input type="number" id="input-5">
-        </div>
-        <div class="input-element">
-          <label for="input-6">New Win Percentage</label>
-          <input type="text" id="input-6">
+          <label for="input-8">New Ties</label>
+          <input type="number" id="input-8" name="ties">
         </div>
 
         <div class="modal-footer">
           <button type="button" class="modal-cancel-button">Cancel</button>
-          <button type="button" class="modal-add-standing-button">Add Team</button>
-          <button type="button" class="modal-edit-standing-button">Update Team</button>
+          <button type="submit" class="modal-edit-standing-button">Edit Team</button>
         </div>
+        </form>
       </div>
     </div>

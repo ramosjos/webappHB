@@ -26,7 +26,20 @@ module.exports = function(){
 
 			}
 	})
-
+	
+        router.post('/', function(req, res){
+	        var mysql = req.app.get('mysql');
+	        var sql = "INSERT INTO credentials (username, password) VALUES (?,?)";
+	        var inserts = [req.body.username, req.body.password];
+      	 	sql = mysql.pool.query(sql,inserts,function(error, results, fields){
+		        if(error){
+            			console.log('Could not add user, insert failed.');
+            		}
+			else{
+         		       res.redirect('/users');
+          		}
+   		});
+        });
 	return router;
 }();
 

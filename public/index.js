@@ -23,13 +23,13 @@ var modalBackdrop = document.getElementById("modal-backdrop");
 var modalCancel = document.getElementsByClassName("modal-cancel-button")[0];
 var modalClose = document.getElementsByClassName("modal-close-button")[0];
 
-var modalAddGameButton = document.getElementsByClassName("modal-add-game-button")[0];
+/*var modalAddGameButton = document.getElementsByClassName("modal-add-game-button")[0];
 var modalDeleteGameButton = document.getElementsByClassName("modal-delete-game-button")[0];
 var modalAddResultButton = document.getElementsByClassName("modal-add-result-button")[0];
 var modalAddStandingButton = document.getElementsByClassName("modal-add-standing-button")[0];
 var modalEditStandingButton = document.getElementsByClassName("modal-edit-standing-button")[0];
 var modalAddUserButton = document.getElementsByClassName("modal-add-user-button")[0];
-var modalAddMessageButton = document.getElementsByClassName("modal-add-message-button")[0];
+var modalAddMessageButton = document.getElementsByClassName("modal-add-message-button")[0];*/
 
 // GAME MODAL //
 function showGameModal(event) {

@@ -25,6 +25,20 @@ module.exports = function(){
 
         }
     });
+    
+    router.post('/', function(req, res){
+	        var mysql = req.app.get('mysql');
+	        var sql = "INSERT INTO results (game_id, team_1_id, team_2_id, team_1_score, team_2_score, quarter, time_left) VALUES ((SELECT id FROM games WHERE id=?),(SELECT id FROM teams WHERE id=?),(SELECT id FROM teams WHERE id=?), ?, ?, ?, ?)";
+	        var inserts = [req.body.game_id, req.body.team_1_id, req.body.team_2_id, req.body.team_1_score, req.body.team_2_score, req.body.quarter, req.body.time_left];
+      	 	sql = mysql.pool.query(sql,inserts,function(error, results, fields){
+		        if(error){
+            			console.log('Could not add result, insert failed.');
+            		}
+			else{
+         		       res.redirect('/results');
+          		}
+   		});
+        });
 
     return router;
 }();

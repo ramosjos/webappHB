@@ -160,6 +160,10 @@ p.Game_Date {
 	float: left;
 }
 
+p.Start_Time {
+	float: right;
+}
+
 .Game_Info {
 	margin-top: 10px;
 	width: 100%;

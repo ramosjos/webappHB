@@ -35,8 +35,9 @@
       {{/each}}
      </table> 
 
+ 
      <button type = "button" id="edit-user"><i class="fas fa-edit"></i></button>
-
+     <form id="adduser" action="/users" method="post">
      <div id="modal-backdrop" class="hidden"></div>
      <div id="user-modal" class="hidden">
       <div class="modal-dialog">
@@ -49,16 +50,17 @@
         <div class="modal-body">
           <div class="input-element">
             <label for="input-1">Username</label>
-            <input type="number" id="input-1">
+            <input type="text" id="input-1" name="username">
           </div>
           <div class="input-element">
             <label for="input-2">Password</label>
-            <input type="text" id="input-2">
+            <input type="text" id="input-2" name="password">
           </div>
          </div>
         <div class="modal-footer">
           <button type="button" class="modal-cancel-button">Cancel</button>
-          <button type="button" class="modal-add-user-button">Add User</button>
+          <button type="submit" class="modal-add-user-button">Add User</button>
         </div>
       </div>
      </div>
+     </form>

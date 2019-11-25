@@ -26,5 +26,21 @@ module.exports = function(){
         }
     });
 
+    router.post('/', function(req, res){
+	        var mysql = req.app.get('mysql');
+		var sql = "INSERT INTO messages (game_id, username, message, date_sent, time_sent) VALUES ((SELECT id FROM games where id=?), (SELECT username FROM credentials WHERE username = ?), ?, ?, ?)";
+		var now = new Date();
+		var pretty  = [now.getHours(), ':', now.getMinutes(), ':', now.getSeconds()].join('');
+	        var inserts = [req.body.game_id, req.body.username, req.body.message, req.body.date_sent, pretty];
+      	 	sql = mysql.pool.query(sql,inserts,function(error, results, fields){
+		        if(error){
+				console.log('Could not insert, insert failed.');
+            		}
+			else{
+         		       res.redirect('/messages');
+          		}
+   		});
+        });
+
     return router;
 }();
