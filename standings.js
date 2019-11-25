@@ -12,11 +12,7 @@ module.exports = function(){
             complete();
         });
     }
-<<<<<<< HEAD
-   
-=======
 
->>>>>>> 5f23a5e9b63529958f1d20db9e18faa6641cca06
     router.get('/', function(req, res){
         var callbackCount = 0;
         var context = {};
@@ -31,7 +27,6 @@ module.exports = function(){
         }
     });
 
-<<<<<<< HEAD
     router.post('/', function(req, res){
 	        var mysql = req.app.get('mysql');
 	        var sql = "INSERT INTO teams (team_name, wins, losses, ties) VALUES (?,?,?,?)";
@@ -61,10 +56,9 @@ module.exports = function(){
                 res.end();
             }
         });
-    });*/
+    });
 
 	
-=======
     router.put('/:id', function(req, res){
         var mysql = req.app.get('mysql');
         console.log(req.body)
@@ -78,9 +72,8 @@ module.exports = function(){
             }
         });
     });
+*/
 
 
-
->>>>>>> 5f23a5e9b63529958f1d20db9e18faa6641cca06
     return router;
 }();
