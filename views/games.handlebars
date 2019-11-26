@@ -20,45 +20,48 @@
 </header>
 
 
+<br>
+<br>
+    <table>
+      <tr>
+        <th>Game ID</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+        <th>Game Date</th>
+        <th>Start Time</th>
+        <th>Stadium</th>
+	<th>Status</th>
+      </tr>
+      {{#each games}}
+      <tr>
+        <th>{{id}}</th>
+        <th>{{team_1_name}}</th>
+        <th>{{team_2_name}}</th>
+        <th>{{game_date}}</th>
+        <th>{{start_time}}</th>
+        <th>{{stadium}}</th>
+	<th>Unbegun</th>
+      </tr>
+      {{/each}}
+     </table>
 
 
-<main class="score-container">
-	{{#each games}}
-	<article class="mini-scoreboard">
-        <div class="scoreboard-icon">
-          <i class="fas fa-basketball-ball"></i>
-        </div>
-        <div class="scoreboard-content">
+<br>
+<br>
+    <table style="width:20%" align="center">
+     <tr>
+        <th>Available Game IDs</th>
+      </tr>
+      {{#each availables}}
+      <tr>
+        <th>{{id}}</th>
+      </tr>
+      {{/each}}
+     </table>
 
-          <div class="Team_1_Info">
-          <p class="Team_1_Name">
-       			{{team_1_name}}
-	  </p>
-	  </div>
-	
-          <div class="Team_2_Info">
-          <p class="Team_2_Name">
-        		{{team_2_name}}
-	  </p>
-          </div>
-	  
-          <div class="Game_Info">
-	  <p class="Game_Date">
-        		{{game_date}}
-	  </p>
-	  <p class="Start_Time">
-        		{{start_time}}
-	  </p>
-	  <!--<p class="Stadium">
-        		{{stadium}}
-	  </p>-->
-  	  </div>
-	  <button type"button" id="thread-icon"><i class="far fa-comment-alt"></i></button>
-        </div>
-        </article>
-	{{/each}}
-</main>
- 
+
+
+
       <button type = "button" id="edit-game"><i class="fas fa-edit"></i></button>
 
     <div id="modal-backdrop" class="hidden"></div>
@@ -84,7 +87,6 @@
             <input type="time" id="input-3" name="start_time">
           </div>
 	  <div class="modal-footer">
-            <button type="button" class="modal-cancel-button">Cancel</button>
             <button type="submit" class="modal-add-game-button">Add Game</button>
           </div>
           </form>

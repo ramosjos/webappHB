@@ -19,45 +19,32 @@
       </nav>
 </header>
 
+<br>
+<br>
+    <table>
+      <tr>
+        <th>Game ID</th>
+        <th>Team 1</th>
+        <th>Score</th>
+        <th>Team 2</th>
+        <th>Score</th>
+        <th>Quarter</th>
+        <th>Time Left</th>
+        <th>Status</th>
+      </tr>
+      {{#each homes}}
+      <tr>
+        <th>{{id}}</th>
+        <th>{{team_1_name}}</th>
+        <th>{{team_1_score}}</th>
+        <th>{{team_2_name}}</th>
+        <th>{{team_2_score}}</th>
+        <th>{{quarter}}</th>
+	<th>{{time_left}}</th>
+	<th>In Progress</th>
+      </tr>
+      {{/each}}
+     </table>
 
 
-
-<main class="score-container">
-	{{#each homes}}
-	<article class="mini-scoreboard">
-        <div class="scoreboard-icon">
-          <i class="fas fa-basketball-ball"></i>
-        </div>
-        <div class="scoreboard-content">
-
-          <div class="Team_1_Info">
-          <p class="Team_1_Name">
-       			{{team_1_name}}
-	  </p>
-	  <p class="Team_1_Score">
-        		{{team_1_score}}
-	  </p>
-	  </div>
-	
-          <div class="Team_2_Info">
-          <p class="Team_2_Name">
-        		{{team_2_name}}
-	  </p>
-	  <p class="Team_2_Score">
-        		{{team_2_score}}
-	  </p>
-          </div>
-	  
-          <div class="Game_Info">
-	  <p class="Quarter">
-        		 {{quarter}}
-	  </p>
-	  <p class="Time_Left">
-        		{{time_left}}
-	  </p>
-  	  </div>
-	  <button type"button" id="thread-icon"><i class="far fa-comment-alt"></i></button>
-        </div>
-        </article>
-	{{/each}}
 </main> 
