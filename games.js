@@ -14,7 +14,7 @@ module.exports = function(){
     }
 
     function getAvailableGames(res, mysql, context, complete){
-        mysql.pool.query("SELECT id FROM games WHERE id NOT IN (SELECT game_id FROM results)", function(error, results, fields){
+        mysql.pool.query("SELECT id, stadium, DATE_FORMAT(game_date, \'%m-%d-%Y\') AS game_date, start_time FROM games WHERE id NOT IN (SELECT game_id FROM results)", function(error, results, fields){
             if(error){
                 res.write(JSON.stringify(error));
                 res.end();

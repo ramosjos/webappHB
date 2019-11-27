@@ -48,13 +48,19 @@
 
 <br>
 <br>
-    <table style="width:20%" align="center">
+    <table style="width:60%" align="center">
      <tr>
         <th>Available Game IDs</th>
+	<th>Stadium</th>
+	<th>Game Date</th>
+	<th>Start Time</th>
       </tr>
       {{#each availables}}
       <tr>
         <th>{{id}}</th>
+        <th>{{stadium}}</th>
+        <th>{{game_date}}</th>
+        <th>{{start_time}}</th>
       </tr>
       {{/each}}
      </table>
