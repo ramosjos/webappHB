@@ -46,7 +46,7 @@
       {{/each}}
      </table>
 
-      <button type = "button" id="edit-standing"><i class="fas fa-edit"></i></button>
+      <button type = "button" id="edit-standing"><i class="fas fa-edit fa-3x"></i></button>
 
     <div id="modal-backdrop" class="hidden"></div>
     <div id="standing-modal" class="hidden">
@@ -59,46 +59,49 @@
         <div class="modal-body">
           <div class="input-element">
             <label for="input-1">Team Name</label>
-            <input type="text" id="input-1" name="team_name">
+            <input type="text" id="input-1" name="team_name" required>
           </div>
           <div class="input-element">
             <label for="input-2">Wins</label>
-            <input type="number" id="input-2" name="wins">
+            <input type="number" id="input-2" name="wins" required>
           </div>
           <div class="input-element">
             <label for="input-3">Losses</label>
-            <input type="number" id="input-3" name="losses">
+            <input type="number" id="input-3" name="losses" required>
           </div>
           <div class="input-element">
             <label for="input-4">Ties</label>
-            <input type="number" id="input-4" name="ties">
+            <input type="number" id="input-4" name="ties" required>
           </div>
-	  <div class="modal-footer">
+	</div>
+	<div class="modal-footer">
           <button type="submit" class="modal-add-standing-button">Add Team</button>
-          </div>
+        </div>
         </form>
 
-	<form id="addstanding" action="/standings" name="_method" value="PUT">
+	<form id="editstanding" action="/standings" method="post">
+	<input type="hidden" name="_method" value="PUT">
         <div class="modal-header">
          <h3>Edit Team</h3>
         </div>
+        <div class="modal-body">
         <div class="input-element">
           <label for="input-5">Team Name</label>
-          <input type="text" id="input-5" name="team_name">
+          <input type="text" id="input-5" name="team_name" required>
         </div>
         <div class="input-element">
           <label for="input-6">New Wins</label>
-          <input type="number" id="input-6" name="wins">
+          <input type="number" id="input-6" name="wins" required>
         </div>
         <div class="input-element">
           <label for="input-7">New Losses</label>
-          <input type="number" id="input-7" name="losses">
+          <input type="number" id="input-7" name="losses" required>
         </div>
         <div class="input-element">
           <label for="input-8">New Ties</label>
-          <input type="number" id="input-8" name="ties">
+          <input type="number" id="input-8" name="ties" required>
         </div>
-
+	</div>
         <div class="modal-footer">
           <button type="button" class="modal-cancel-button">Cancel</button>
           <button type="submit" class="modal-edit-standing-button">Edit Team</button>

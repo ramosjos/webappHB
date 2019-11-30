@@ -82,7 +82,7 @@ function showMessageModal(event) {
 }
 
 function closeMessageModal(event) {
-	Message_modal.style.display = "none";
+	message_modal.style.display = "none";
 	modalBackdrop.style.display = "none";
 }
 

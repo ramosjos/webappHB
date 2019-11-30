@@ -68,7 +68,7 @@
 
 
 
-      <button type = "button" id="edit-game"><i class="fas fa-edit"></i></button>
+    <button type = "button" id="edit-game"><i class="fas fa-edit fa-3x"></i></button>
 
     <div id="modal-backdrop" class="hidden"></div>
      <div id="game-modal" class="hidden">
@@ -82,42 +82,36 @@
         <div class="modal-body">
           <div class="input-element">
             <label for="input-1">Stadium</label>
-            <input type="text" id="input-1" name="stadium">
+            <input type="text" id="input-1" name="stadium" required>
           </div>
           <div class="input-element">
             <label for="input-2">Game Date</label>
-            <input type="date" id="input-2" name="game_date">
+            <input type="date" id="input-2" name="game_date" required>
           </div>
           <div class="input-element">
             <label for="input-3">Start Time</label>
-            <input type="time" id="input-3" name="start_time">
+            <input type="time" id="input-3" name="start_time" required>
           </div>
 	  <div class="modal-footer">
             <button type="submit" class="modal-add-game-button">Add Game</button>
           </div>
-          </form>
+	</div>
+        </form>
 
-        
-          <form id="deletegame" action="/games" method="delete">
+	<form id="deletegame" action="/games" method="post">
+	<input type="hidden" name="_method" value="DELETE">        
           <div class="modal-header">
             <h3>Delete Game</h3>
           </div>
+	<div class="modal-body">
           <div class="input-element">
-            <label for="input-4">Stadium</label>
-            <input type="text" id="input-6">
+            <label for="input-4">Game ID</label>
+            <input type="number" id="input-4" name="game_id" required>
           </div>
-          <div class="input-element">
-            <label for="input-5">Game Date</label>
-            <input type="date" id="input-7">
-          </div>
-          <div class="input-element">
-            <label for="input-6">Start Time</label>
-            <input type="time" id="input-8">
-          </div>
-        </div>
+	 </div>
         <div class="modal-footer">
           <button type="button" class="modal-cancel-button">Cancel</button>
-          <button type="button" class="modal-delete-game-button">Delete Game</button>
+          <button type="submit" class="modal-delete-game-button">Delete Game</button>
         </div>
 	</form>
       </div>

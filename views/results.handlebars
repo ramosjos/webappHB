@@ -44,7 +44,7 @@
       {{/each}}
      </table>
 
-      <button type = "button" id="edit-result"><i class="fas fa-edit"></i></button>
+      <button type = "button" id="edit-result"><i class="fas fa-edit fa-3x"></i></button>
 
      <div id="modal-backdrop" class="hidden"></div>
      <div id="result-modal" class="hidden">
@@ -59,31 +59,31 @@
         <div class="modal-body">
           <div class="input-element">
             <label for="input-1">Game ID</label>
-            <input type="number" id="input-1" name="game_id">
+            <input type="number" id="input-1" name="game_id" required>
           </div>
           <div class="input-element">
             <label for="input-2">Team 1 ID</label>
-            <input type="number" id="input-2" name="team_1_id">
+            <input type="number" id="input-2" name="team_1_id" required>
           </div>
           <div class="input-element">
             <label for="input-3">Team 2 ID</label>
-            <input type="number" id="input-3" name="team_2_id">
+            <input type="number" id="input-3" name="team_2_id" required>
           </div>
           <div class="input-element">
             <label for="input-4">Team 1 Score</label>
-            <input type="number" id="input-4" name="team_1_score">
+            <input type="number" id="input-4" name="team_1_score" required>
           </div>
           <div class="input-element">
             <label for="input-5">Team 2 Score</label>
-            <input type="number" id="input-5" name="team_2_score">
+            <input type="number" id="input-5" name="team_2_score" required>
           </div>
           <div class="input-element">
             <label for="input-6">Quarter</label>
-            <input type="number" id="input-6" name="quarter">
+            <input type="number" id="input-6" name="quarter" required>
           </div>
 	  <div class="input-element">
             <label for="input-7">Time Left</label>
-            <input type="text" id="input-7" name="time_left">
+            <input type="time" id="input-7" name="time_left" min="0:00" max ="12:00" required>
           </div>
          </div>
         <div class="modal-footer">

@@ -96,96 +96,6 @@ a:focus {
   outline: none;
 }
 
-
-
-.score-container {
-  margin: 50px 10%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.mini-scoreboard {
-  flex: 0 1 28%;
-  display: flex;
-  margin: 2px;
-  padding: 20px;
-  border: 1px solid #dadada;
-  border-radius: 2px;
-  background-color: #fff;
-}
-
-.scoreboard-icon {
-  font-size: 24px;
-}
-
-.scoreboard-content {
-  flex: 1 1 80%;
-  margin-left: 10px;
-}
-
-.scoreboard-content p {
-  margin: 0;
-}
-
-.scoreboard-content .twit-attribution {
-  margin-top: 8px;
-  text-align: right;
-  font-weight: bold;
-}
-
-p.Team_1_Name {
-	width: 100%;
-	font-size: x-large;
-}
-p.Team_2_Name {
-	width: 100%;
-	font-size: x-large;
-}
-p.Team_1_Score {
-	width: 100%;
-	font-size: large;
-}
-p.Team_2_Score {
-	width: 100%;
-	font-size: large;
-}
-p.Quarter {
-	float: left;
-}
-p.Time_Left {
-	float: right;
-}
-
-p.Game_Date {
-	float: left;
-}
-
-p.Start_Time {
-	float: right;
-}
-
-.Game_Info {
-	margin-top: 10px;
-	width: 100%;
-}
-
-.Team_1_Info {
-	border: 2px solid #1a1a1a;
-	border-radius: 4px;
-}
-
-.Team_2_Info {
-	border: 2px solid #1a1a1a;
-	border-radius: 4px;
-	margin-top: 8px;
-}
-
-#thread-icon {
-	width: 100%;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -209,7 +119,7 @@ tr{
 	right: 110px;
 	color: #d73f09;
 	background-color: white;
-
+	
 }
 
 #edit-result {

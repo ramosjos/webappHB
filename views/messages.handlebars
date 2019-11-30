@@ -44,7 +44,7 @@
       {{/each}}
      </table> 
 
-      <button type = "button" id="edit-message"><i class="fas fa-edit"></i></button>
+      <button type = "button" id="edit-message"><i class="fas fa-edit fa-3x"></i></button>
 
      <form id="addmessage" action="/messages" method="post">
      <div id="modal-backdrop" class="hidden"></div>
@@ -59,19 +59,19 @@
         <div class="modal-body">
           <div class="input-element">
             <label for="input-1">Game ID</label>
-            <input type="number" id="input-1" name="game_id">
+            <input type="number" id="input-1" name="game_id" required>
           </div>
           <div class="input-element">
             <label for="input-2">Username</label>
-            <input type="text" id="input-2" name="username">
+            <input type="text" id="input-2" name="username" required>
           </div>
           <div class="input-element">
             <label for="input-3">Message</label>
-            <input type="text" id="input-3" name="message">
+            <input type="text" id="input-3" name="message" required>
           </div>
           <div class="input-element">
             <label for="input-4">Date</label>
-            <input type="date" id="input-4" name="date_sent">
+            <input type="date" id="input-4" name="date_sent" required>
           </div>
          </div>
         <div class="modal-footer">

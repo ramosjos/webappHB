@@ -53,5 +53,21 @@ module.exports = function(){
    		});
         });
 
+    router.delete('/', function(req, res){
+        var mysql = req.app.get('mysql');
+        var sql = "DELETE FROM results WHERE game_ID=?; DELETE FROM associative WHERE game_id=?; DELETE FROM games WHERE id=?";
+        var inserts = [req.body.game_id, req.body.game_id, req.body.game_id];
+        sql = mysql.pool.query(sql,inserts,function(error, results, fields){
+            if(error){
+                console.log(error)
+                res.write(JSON.stringify(error));
+                res.end();
+            }else{
+                res.status(200);
+                res.end();
+            }
+        });
+    });
+
     return router;
 }();
