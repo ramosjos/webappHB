@@ -46,7 +46,6 @@ module.exports = function(){
 	        var inserts = [req.body.team_name, req.body.wins, req.body.losses, req.body.ties];
       	 	sql = mysql.pool.query(sql,inserts,function(error, results, fields){
 		        if(error){
-            			console.log('Could not add team, insert failed');
             		}
 			else{
          		       res.redirect('/standings');
@@ -54,10 +53,10 @@ module.exports = function(){
    		});
     });
 
-    router.put('/', function(req, res){
+    router.put('/:id', function(req, res){
         var mysql = req.app.get('mysql');
-        var sql = "UPDATE teams SET wins=?, losses=?, ties=? WHERE team_name=?";
-        var inserts = [req.body.team_name, req.body.wins, req.body.losses, req.body.ties];
+        var sql = "UPDATE teams SET wins=?, losses=?, ties=? WHERE id=?";
+        var inserts = [req.body.wins, req.body.losses, req.body.ties, req.params.id];
         sql = mysql.pool.query(sql,inserts,function(error, results, fields){
             if(error){
                 console.log(error)

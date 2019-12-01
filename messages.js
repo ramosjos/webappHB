@@ -40,7 +40,7 @@ module.exports = function(){
          		       res.redirect('/messages');
           		}
    		});
-        });
+        })
 
     return router;
 }();

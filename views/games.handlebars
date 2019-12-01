@@ -99,19 +99,18 @@
         </form>
 
 	<form id="deletegame" action="/games" method="post">
-	<input type="hidden" name="_method" value="DELETE">        
           <div class="modal-header">
             <h3>Delete Game</h3>
           </div>
 	<div class="modal-body">
           <div class="input-element">
             <label for="input-4">Game ID</label>
-            <input type="number" id="input-4" name="game_id" required>
+            <input type="number" id="input-4" name="id" required>
           </div>
 	 </div>
         <div class="modal-footer">
           <button type="button" class="modal-cancel-button">Cancel</button>
-          <button type="submit" class="modal-delete-game-button">Delete Game</button>
+          <button onclick="deleteGame(document.getElementById('input-4').value)"  class="modal-delete-game-button">Delete Game</button>
         </div>
 	</form>
       </div>

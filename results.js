@@ -38,7 +38,7 @@ module.exports = function(){
          		       res.redirect('/results');
           		}
    		});
-        });
+        })
 
     return router;
 }();
