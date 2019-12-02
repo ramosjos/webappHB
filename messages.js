@@ -12,6 +12,20 @@ module.exports = function(){
             complete();
         });
     }
+
+    function getMessagesSearch(req, res, mysql, context, complete){
+		var query = "SELECT chat_number, game_id, username, message, DATE_FORMAT(date_sent, \'%m-%d-%Y\') AS date_sent, time_sent FROM messages WHERE username LIKE " + mysql.pool.escape(req.params.s + '%');
+		mysql.pool.query(query, function(error, results, fields){
+			if(error){
+				res.write(JSON.stringify(error));
+				res.end();
+			}
+			context.messages = results;
+			complete();
+		});
+	}
+		 
+
     router.get('/', function(req, res){
         var callbackCount = 0;
         var context = {};
@@ -40,7 +54,21 @@ module.exports = function(){
          		       res.redirect('/messages');
           		}
    		});
-        })
+        });
+
+	router.get('/search/:s', function(req, res){
+        	var callbackCount = 0;
+	        var context = {};
+	        var mysql = req.app.get('mysql');
+		getMessagesSearch(req, res, mysql, context, complete);
+	        function complete(){
+			callbackCount++;
+			if(callbackCount >= 1){
+       		         	res.render('messages', context);
+			}
+        	}
+	})
+
 
     return router;
 }();

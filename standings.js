@@ -23,7 +23,17 @@ module.exports = function(){
         });
     }
 
-
+    function getStandingsSearch(req, res, mysql, context, complete){
+		var query = "SELECT id, team_name, standing, wins, losses, ties, win_percentage FROM teams WHERE team_name LIKE " + mysql.pool.escape(req.params.s + '%');
+		mysql.pool.query(query, function(error, results, fields){
+			if(error){
+				res.write(JSON.stringify(error));
+				res.end();
+			}
+			context.standings = results;
+			complete();
+		});
+	}
 
     router.get('/', function(req, res){
         var callbackCount = 0;
@@ -68,6 +78,21 @@ module.exports = function(){
             }
         });
     });
+    
+     router.get('/search/:s', function(req, res){
+        	var callbackCount = 0;
+	        var context = {};
+	        var mysql = req.app.get('mysql');
+		getStandingsSearch(req, res, mysql, context, complete);
+	        function complete(){
+			callbackCount++;
+			if(callbackCount >= 1){
+       		         	res.render('standings', context);
+			}
+        	}
+	})
+
+
 
     return router;
 }();

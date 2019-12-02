@@ -3,7 +3,7 @@ module.exports = function(){
 	var router = express.Router();
 
 	function getUsers(res, mysql, context, complete){
-		mysql.pool.query("SELECT * FROM credentials", function(error, results, fields){
+		mysql.pool.query("SELECT username, password FROM credentials", function(error, results, fields){
 		if(error){
 			res.write(JSON.stringify(error));
 			res.end();
@@ -14,7 +14,7 @@ module.exports = function(){
 	}
 
 	function getUsersSearch(req, res, mysql, context, complete){
-		var query = "SELECT * FROM credentials WHERE username LIKE " + mysql.pool.escape(req.params.s + '%');
+		var query = "SELECT username, password FROM credentials WHERE username LIKE " + mysql.pool.escape(req.params.s + '%');
 		mysql.pool.query(query, function(error, results, fields){
 			if(error){
 				res.write(JSON.stringify(error));
