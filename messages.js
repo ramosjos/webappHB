@@ -14,7 +14,7 @@ module.exports = function(){
     }
 
     function getMessagesSearch(req, res, mysql, context, complete){
-		var query = "SELECT chat_number, game_id, username, message, DATE_FORMAT(date_sent, \'%m-%d-%Y\') AS date_sent, time_sent FROM messages WHERE username LIKE " + mysql.pool.escape(req.params.s + '%');
+		var query = "SELECT chat_number, game_id, username, message, DATE_FORMAT(date_sent, \'%m-%d-%Y\') AS date_sent, time_sent FROM messages WHERE username LIKE " + mysql.pool.escape(req.params.s + '%') + " OR game_id=" + mysql.pool.escape(req.params.s);
 		mysql.pool.query(query, function(error, results, fields){
 			if(error){
 				res.write(JSON.stringify(error));
