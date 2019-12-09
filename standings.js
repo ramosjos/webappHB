@@ -56,6 +56,8 @@ module.exports = function(){
 	        var inserts = [req.body.team_name, req.body.wins, req.body.losses, req.body.ties];
       	 	sql = mysql.pool.query(sql,inserts,function(error, results, fields){
 		        if(error){
+			       console.log("Error inserting team.");
+			       res.redirect('/standings');
             		}
 			else{
          		       res.redirect('/standings');

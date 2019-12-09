@@ -49,6 +49,7 @@ module.exports = function(){
       	 	sql = mysql.pool.query(sql,inserts,function(error, results, fields){
 		        if(error){
 				console.log('Could not insert, insert failed.');
+				res.redirect('/messages');
             		}
 			else{
          		       res.redirect('/messages');

@@ -47,6 +47,7 @@ module.exports = function(){
       	 	sql = mysql.pool.query(sql,inserts,function(error, results, fields){
 		        if(error){
             			console.log('Could not add user, insert failed.');
+				res.redirect('/users');
             		}
 			else{
          		       res.redirect('/users');

@@ -57,6 +57,8 @@ module.exports = function(){
 	        var inserts = [req.body.stadium, req.body.game_date, req.body.start_time];
       	 	sql = mysql.pool.query(sql,inserts,function(error, results, fields){
 		        if(error){
+				console.log("Error inserting games");
+				res.redirect('/games');
             		}
 			else{
          		       res.redirect('/games');
@@ -66,8 +68,8 @@ module.exports = function(){
 
     router.delete('/:id', function(req, res){
         var mysql = req.app.get('mysql');
-        var sql = "DELETE FROM results WHERE game_id=?; DELETE FROM associative WHERE game_id=?; DELETE FROM games WHERE id=?";
-        var inserts = [req.params.id, req.params.id, req.params.id];
+        var sql = "DELETE FROM results WHERE game_id=?; DELETE FROM associative WHERE game_id=?; DELETE FROM messages WHERE game_id=?; DELETE FROM games WHERE id=?";
+        var inserts = [req.params.id, req.params.id, req.params.id, req.params.id]
         sql = mysql.pool.query(sql,inserts,function(error, results, fields){
             if(error){
                 console.log(error)
@@ -95,3 +97,6 @@ module.exports = function(){
 
     return router;
 }();
+
+
+   
